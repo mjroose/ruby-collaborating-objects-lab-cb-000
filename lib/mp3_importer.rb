@@ -5,15 +5,8 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-  end
-
-  def files
     Dir.chdir(self.path)
     @files = Dir.glob("*.mp3")
-    binding.pry
   end
 
-  def size
-    @files.size
-  end
 end
