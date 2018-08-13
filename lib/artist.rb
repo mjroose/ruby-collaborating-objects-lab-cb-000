@@ -19,4 +19,9 @@ class Artist
   def self.all
     @@all
   end
+
+  def self.find_by_name(name)
+    self.all.detect do |artist|
+      artist.name == name
+    end
 end
