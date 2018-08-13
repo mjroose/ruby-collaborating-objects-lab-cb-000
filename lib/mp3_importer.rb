@@ -12,4 +12,8 @@ class MP3Importer
     @files = Dir.glob("*.mp3")
     binding.pry
   end
+
+  def size
+    @files.size
+  end
 end
