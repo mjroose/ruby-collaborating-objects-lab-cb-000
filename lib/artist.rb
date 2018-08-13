@@ -5,15 +5,15 @@ class Artist
   def initialize(name = nil)
     @name = name
     @songs = []
-    save(self)
+    self.class.save(self)
   end
 
   def add_song(song)
     self.songs << song
   end
 
-  def save
-    @@all << self
+  def self.save(artist)
+    @@all << artist
   end
 
 end
