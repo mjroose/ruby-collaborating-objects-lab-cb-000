@@ -1,7 +1,7 @@
 class MP3Importer
-  attr_accessor :files
+  attr_accessor :files, :path
 
   def initialize(path)
-    @files = path.glob("*.mp3")
+    @path = path
   end
 end
