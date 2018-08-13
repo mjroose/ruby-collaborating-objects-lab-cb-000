@@ -34,4 +34,10 @@ class Artist
     artist = self.find_by_name(name)
     artist ? artist : self.new(name)
   end
+
+  def print_songs
+    self.songs.each do |song|
+      puts song.name
+    end
+  end
 end
