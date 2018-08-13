@@ -4,6 +4,7 @@ class Artist
 
   def initialize(name = nil)
     @name = name
+    @songs = []
     @@all << self
   end
 
