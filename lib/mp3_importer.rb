@@ -4,4 +4,9 @@ class MP3Importer
   def initialize(path)
     @path = path
   end
+
+  def files
+    Dir.chdir(self.path)
+    @files = Dir.glob("*.mp3")
+  end
 end
