@@ -24,4 +24,10 @@ class Artist
     self.all.detect do |artist|
       artist.name == name
     end
+  end
+
+  def self.create(name)
+    artist = self.new(name)
+  end
+    
 end
