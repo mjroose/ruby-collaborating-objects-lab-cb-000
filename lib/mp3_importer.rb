@@ -5,7 +5,10 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    @files = Dir.glob("#{path}/*.mp3").slice("#{path}/")
+    @files = Dir.glob("#{path}/*.mp3")
+    @files.each do |file| 
+      slice!("#{path}/")
+    end
   end
 
 end
