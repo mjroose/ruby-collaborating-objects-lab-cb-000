@@ -30,4 +30,8 @@ class Artist
     artist = self.new(name)
   end
 
+  def self.find_or_create_by_name(name)
+    artist = self.find_by_name(name)
+    artist ? artist : self.new(name)
+  end
 end
