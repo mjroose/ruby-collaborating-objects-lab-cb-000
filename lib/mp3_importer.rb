@@ -5,8 +5,7 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-    @files = Dir.glob("#{path}/*.mp3")
-    binding.pry
+    @files = Dir.glob("#{path}/*.mp3").slice("#{path}/")
   end
 
 end
