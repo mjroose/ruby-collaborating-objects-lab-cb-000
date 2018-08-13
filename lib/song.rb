@@ -14,7 +14,7 @@ class Song
     name = song_data[1]
     genre = song_data[2]
     song = self.new(name)
-    song.artist = artist
+    song.artist = Artist.find_or_create_by_name(artist)
     song.genre = genre
     song
   end
